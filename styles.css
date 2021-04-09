@@ -530,6 +530,11 @@ code, pre {
   padding: 0 40px;
 }
 
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
 .card {
   background-color: #fff;
   color: #333;
