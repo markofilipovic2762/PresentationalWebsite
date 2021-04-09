@@ -78,6 +78,68 @@ code, pre {
         border-bottom: 2px white solid;
     }
 }
+
+/*  MOBILE NAV */
+.menu {
+    display: none;
+    visibility: hidden;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 101;
+    left: 0;
+    top: 0;
+    opacity: 0.98;
+    background-color: #24252A;
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+    a {
+        padding: 15px;
+        font-size: 36px;
+        display: block;
+        transition: all 0.3s ease 0s ;
+        color: #ccc;
+        &:hover, &:focus {
+            color: #0088a9;
+            border-bottom: 1px solid #0088a9;
+        }
+    }
+    .close {
+        position: absolute;
+        top:20px;
+        right: 45px;
+        font-size: 60px;
+        cursor: pointer;
+        &:hover, &:focus {
+            border: none;
+        }
+    }
+}
+
+.overlay_content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-height: 450px){
+    .overlay {
+        a {
+            font-size: 20px;
+        }
+        .close {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
+    }   
+}
+
 /* SHOWCASE */
 .showcase {
     height: 400px;
@@ -304,6 +366,17 @@ code, pre {
     .docs-main .grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+
+    .navbar{
+        ul {
+            display: none;
+        }
+        
+    }
+    .menu {
+        display: inherit;
+        visibility: visible;
     }
 
     .cli {

@@ -11,7 +11,7 @@
 <body>
     <div class="navbar">
         <div class="container flex">
-            <h1 class="logo">Marko.</h1>
+            <div class="logo"></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -19,6 +19,15 @@
                     <li><a href="docs.html">Docs</a></li>
                 </ul>
             </nav>
+            <a onclick="openNav()" class="menu" href="#"><i class="fa fa-bars fa-2x"></i></a>
+        </div>
+    </div>
+    <div id="mobile_menu" class="overlay">
+        <a class="close" onclick="closeNav()">&times;</a>
+        <div class="overlay_content">
+            <a href="/index.html">Home</a>
+            <a href="/features.html">Features</a>
+            <a href="/docs.html">Docs</a> 
         </div>
     </div>
     <section class="features-head bg-primary py-3">
@@ -120,5 +129,7 @@
             </div>
         </div>
     </footer>
+
+    <script type="text/javascript" src="mobile.js"></script>
 </body>
 </html>
